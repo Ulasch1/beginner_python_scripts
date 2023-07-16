@@ -1,0 +1,21 @@
+import stack as st
+
+word = input("Write a word >>> ")
+
+stack_word = st.create_stack()
+
+# Initialize characters in stack
+for char in word:
+    st.push(stack_word, char)
+
+reversed_word = []
+
+# Pop characters from the stack and append them to reversed_word
+while not st.isEmpty(stack_word):
+    reversed_word.append(st.pop(stack_word))
+
+# Join the reversed characters to form the reversed word
+reversed_word = ''.join(reversed_word)
+
+# Print the reversed word
+print(reversed_word)
